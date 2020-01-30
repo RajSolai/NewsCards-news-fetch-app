@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref=""></ion-back-button>
+    </ion-buttons>
+    <ion-title>Entertainement news</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-spinner *ngIf="showspinner"></ion-spinner>
+  <ion-card *ngFor="let news of entertainews?.articles" class="card">
+    <img [src]=" news.urlToImage " alt="" />
+    <ion-card-header>
+      <ion-card-subtitle><b>Author :</b> {{news.author}} </ion-card-subtitle>
+      <ion-card-title> {{news.title}} </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      {{news.content}}
+    </ion-card-content>
+    <ion-item class="myitem">
+      <ion-label>
+        <b>
+          <a [href]="news.url">See Full Article</a>
+        </b>
+      </ion-label>
+      <ion-icon
+        class="global"
+        name="share"
+        (click)="share(news.url)"
+      ></ion-icon>
+    </ion-item>
+  </ion-card>
+</ion-content>

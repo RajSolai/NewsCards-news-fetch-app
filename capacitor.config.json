@@ -1,0 +1,20 @@
+{
+  "appId": "rf.gd.solairaj.newscards",
+  "appName": "NewsCards",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "cordova": {
+    "preferences": {
+      "ScrollEnabled": "false",
+      "android-minSdkVersion": "19",
+      "BackupWebStorage": "none",
+      "SplashMaintainAspectRatio": "true",
+      "FadeSplashScreenDuration": "200",
+      "SplashShowOnlyFirstTime": "false",
+      "SplashScreen": "screen",
+      "SplashScreenDelay": "2000",
+      "ShowSplashScreenSpinner": "false"
+    }
+  }
+}

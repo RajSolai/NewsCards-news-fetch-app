@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">NewsCards</string>
+    <string name="title_activity_main">NewsCards</string>
+    <string name="package_name">rf.gd.solairaj.newscards</string>
+    <string name="custom_url_scheme">rf.gd.solairaj.newscards</string>
+</resources>

@@ -1,0 +1,2 @@
+title bar color : 282a36,
+tab bar color : 28a36
