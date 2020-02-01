@@ -21,7 +21,7 @@
     <ion-item class="myitem">
       <ion-label>
         <b>
-          <a [href]="news.url">See Full Article</a>
+          <p (click)="OpenUrl(news.url)" style="display: block;">See Full Article</p>
         </b>
       </ion-label>
       <ion-icon

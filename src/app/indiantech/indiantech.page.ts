@@ -2,7 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { SocialSharing } from "@ionic-native/social-sharing/ngx";
 import { Plugins } from "@capacitor/core";
-const { Share } = Plugins;
+const { Share ,Browser } = Plugins;
 
 @Component({
   selector: "app-indiantech",
@@ -44,5 +44,8 @@ export class IndiantechPage implements OnInit {
       url: shareurl,
       dialogTitle: "Share with friends"
     });
+  }
+  async OpenUrl(nurl: string) {
+    await Browser.open({ url: nurl });
   }
 }

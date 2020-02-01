@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { Plugins } from "@capacitor/core";
-const { Share } = Plugins;
+const { Share, Browser } = Plugins;
 @Component({
   selector: "app-indianentertain",
   templateUrl: "./indianentertain.page.html",
@@ -9,7 +9,6 @@ const { Share } = Plugins;
 })
 export class IndianentertainPage implements OnInit {
   constructor(private http: HttpClient) {}
-
   //this stores all the articles
   entertainews;
   showspinner: Boolean = true;
@@ -29,7 +28,6 @@ export class IndianentertainPage implements OnInit {
       }
     );
   }
-
   async share(shareurl: string) {
     await Share.share({
       title: "",
@@ -37,5 +35,8 @@ export class IndianentertainPage implements OnInit {
       url: shareurl,
       dialogTitle: "Share with friends"
     });
+  }
+  async OpenUrl(nurl: string) {
+    await Browser.open({ url: nurl });
   }
 }
