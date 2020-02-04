@@ -2,7 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { SocialSharing } from "@ionic-native/social-sharing/ngx";
 import { Plugins } from "@capacitor/core";
-const { Share , Browser } = Plugins;
+const { Share, Browser } = Plugins;
 @Component({
   selector: "app-indianlive",
   templateUrl: "./indianlive.page.html",
@@ -35,6 +35,6 @@ export class IndianlivePage implements OnInit {
     });
   }
   async OpenUrl(nurl: string) {
-    await Browser.open({ url: nurl });
+    await Browser.open({ url: nurl, toolbarColor: "#282a36" });
   }
 }

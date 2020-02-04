@@ -37,6 +37,6 @@ export class IndianentertainPage implements OnInit {
     });
   }
   async OpenUrl(nurl: string) {
-    await Browser.open({ url: nurl });
+    await Browser.open({ url: nurl, toolbarColor: "#282a36" });
   }
 }
